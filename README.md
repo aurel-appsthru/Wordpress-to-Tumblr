@@ -5,7 +5,6 @@
 PHP script that help to export Wordpress posts to Tumblr.
 
 It can serve as a basis because it contains the resolution of several export issues :
-
  
 ##Features
 
