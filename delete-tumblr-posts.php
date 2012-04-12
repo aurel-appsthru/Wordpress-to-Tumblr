@@ -80,6 +80,8 @@ do
 		} else {
 			echo "Error: $result\n";
 		}
+		
+		sleep( $rateLimit ); // waiting
 
 	}
 
