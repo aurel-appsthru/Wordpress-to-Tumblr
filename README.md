@@ -30,10 +30,24 @@ It can serve as a basis because it contains the resolution of several export iss
  
 ##Configuration
 
-Copy, rename and edit the sample configuration file __config.php.sample__ to __config.php__
+Copy, rename and edit the sample configuration file `config.php.sample` to `config.php`
 
 ##Prerequisites
-Wordpress posts are beforehand arranged in a specific category that represent the posts types ( $tumblogWPCategory in config.php ).
+
+To obtain an export file from Wordpress, go to the wp-admin menu and choose Tools>Export. Select _Articles_ and push the _Download_ button. 
+
+The script can simply export all posts as Regular, but it was also made to deal with categories and custom fields ( if you have previously tried to make Wordpress look like Tumblr with a [custom taxonomy](http://codex.wordpress.org/Taxonomies)  and [Custom Field Template](http://wordpress.org/extend/plugins/custom-field-template/) ).
+
+Indicate in `config.php` the category which represent the posts types in  __$tumblogWPCategory__ . Then indicate the corresponding terms for each type in __$tumblogWPCategoryTermsMatches__.  
+
+Consider that as it is, the script support this custom fields : 
+ 
+- link : link-url
+- photo : image
+- video : video-embed
+- quote : quote-author, quote-copy ,quote-url
+- audio : audio
+
 
 ##Photos and images
 Photos are _automagically_ uploaded to Tumblr when using the _photo_ post type.
